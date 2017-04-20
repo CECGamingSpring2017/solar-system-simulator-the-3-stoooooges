@@ -108,8 +108,10 @@ int main() {
 
 
 			//parametric equations for Earth's elliptical orbit
+
 			earth_x = Earth_Semimajor_Axis*(cos((t*3.14*Period_Ratio_Earth) / 180 - Earth_Eccentricity)) + SCREEN_WIDTH / 2;
-			earth_y = Earth_Semimajor_Axis*(sqrt((1 - Earth_Eccentricity)*(1 - Earth_Eccentricity))*sin((t*3.14) / 180)) + SCREEN_HEIGHT / 2;
+
+			earth_y = Earth_Semimajor_Axis*(sqrt((1 - Earth_Eccentricity)*(1 - Earth_Eccentricity))*sin((t*3.14*Period_Ratio_Earth) / 180)) + SCREEN_HEIGHT / 2;
 
 			//parametric equations for Mars orbit go here
 			
